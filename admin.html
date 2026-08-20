@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#17100f" />
-    <meta name="description" content="Skylar XD Enterprise Admin Dashboard" />
-    <title>𝑺𝑲𝒀𝑳𝑨𝑹 𝑿𝑫 · Enterprise Admin Suite</title>
+    <meta name="description" content="Talkless XMD Enterprise Admin Dashboard" />
+    <title>𝐓𝐀𝐋𝐊𝐋𝐄𝐒𝐒 𝐗𝐌𝐃 · Enterprise Admin Suite</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600;1,700&display=swap" rel="stylesheet" />
@@ -108,12 +108,12 @@
       <div class="auth-card">
         <p class="eyebrow" style="margin-bottom: 0;">Restricted Enterprise Portal</p>
         <h2>Admin Authentication</h2>
-        <p class="hero-text" style="font-size: 0.88rem; margin: 0 auto; max-width: 320px;">Enter passcode <strong>skylar10</strong> to access the complete management suite.</p>
+        <p class="hero-text" style="font-size: 0.88rem; margin: 0 auto; max-width: 320px;">Enter passcode <strong>talkless10</strong> to access the complete management suite.</p>
         <form id="auth-form" style="display: grid; gap: 14px; margin-top: 5px;">
           <input id="admin-pass" type="password" placeholder="••••••••" autocomplete="current-password" required />
           <button class="button primary" type="submit" style="width: 100%;">Authorize Access ↗</button>
         </form>
-        <div class="status-box error" id="auth-error" hidden style="margin-top: 0; font-size: 0.78rem;">Incorrect password. Use skylar10.</div>
+        <div class="status-box error" id="auth-error" hidden style="margin-top: 0; font-size: 0.78rem;">Incorrect password. Use talkless10.</div>
         <a href="./" style="color: var(--soft); font-size: 0.75rem; text-decoration: underline; margin-top: 5px;">← Return to Pairing Portal</a>
       </div>
     </div>
@@ -122,10 +122,10 @@
     <div class="ambient ambient-right" aria-hidden="true"></div>
     <main class="shell">
       <header class="topbar">
-        <a class="brand" href="./" aria-label="Skylar XD home">
+        <a class="brand" href="./" aria-label="Talkless XMD home">
           <span class="brand-mark">S</span>
           <span class="brand-copy">
-            <strong>𝑺𝑲𝒀𝑳𝑨𝑹 𝑿𝑫</strong>
+            <strong>𝐓𝐀𝐋𝐊𝐋𝐄𝐒𝐒 𝐗𝐌𝐃</strong>
             <small>ENTERPRISE CONTROL CENTER</small>
           </span>
         </a>
@@ -484,11 +484,11 @@
           <div style="display: grid; gap: 14px; margin-top: 20px;">
             <div>
               <label style="font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase;">Telegram Support Link</label>
-              <input type="text" value="https://t.me/blacklordProjects_bot?start=skylar" style="width: 100%; margin-top: 6px; padding: 12px 16px; border: 1px solid var(--line-strong); border-radius: 8px; background: rgba(20, 10, 8, 0.85); color: var(--ink); outline: none;" />
+              <input type="text" value="https://t.me/blacklordProjects_bot?start=talkless" style="width: 100%; margin-top: 6px; padding: 12px 16px; border: 1px solid var(--line-strong); border-radius: 8px; background: rgba(20, 10, 8, 0.85); color: var(--ink); outline: none;" />
             </div>
             <div>
               <label style="font-size: 0.78rem; font-weight: 700; color: var(--muted); text-transform: uppercase;">Admin Passcode</label>
-              <input type="text" value="skylar10" style="width: 100%; margin-top: 6px; padding: 12px 16px; border: 1px solid var(--line-strong); border-radius: 8px; background: rgba(20, 10, 8, 0.85); color: var(--ink); outline: none;" />
+              <input type="text" value="talkless10" style="width: 100%; margin-top: 6px; padding: 12px 16px; border: 1px solid var(--line-strong); border-radius: 8px; background: rgba(20, 10, 8, 0.85); color: var(--ink); outline: none;" />
             </div>
             <button class="button primary" style="width: fit-content;" onclick="alert('Settings saved.')">Save Settings ↗</button>
           </div>
@@ -522,7 +522,7 @@
         </section>
       </div>
 
-      <footer class="footer"><span>𝑺𝑲𝒀𝑳𝑨𝑹 𝑿𝑫</span><span>Enterprise Control Center · Database-Ready</span><a href="https://github.com/blacklorddev15/skylar" target="_blank" rel="noopener noreferrer">Source ↗</a></footer>
+      <footer class="footer"><span>𝐓𝐀𝐋𝐊𝐋𝐄𝐒𝐒 𝐗𝐌𝐃</span><span>Enterprise Control Center · Database-Ready</span><a href="https://github.com/blacklorddev15/talkless" target="_blank" rel="noopener noreferrer">Source ↗</a></footer>
     </main>
 
     <script>
@@ -545,15 +545,15 @@
       const authError = document.querySelector('#auth-error');
       const logoutBtn = document.querySelector('#logout-btn');
 
-      if (localStorage.getItem('skylar_authed') === 'true') {
+      if (localStorage.getItem('talkless_authed') === 'true') {
         authOverlay.style.display = 'none';
       }
 
       authForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const pwd = adminPass.value.trim();
-        if (pwd === 'skylar10') {
-          localStorage.setItem('skylar_authed', 'true');
+        if (pwd === 'talkless10') {
+          localStorage.setItem('talkless_authed', 'true');
           authOverlay.style.display = 'none';
         } else {
           authError.hidden = false;
@@ -562,7 +562,7 @@
       });
 
       logoutBtn.addEventListener('click', () => {
-        localStorage.removeItem('skylar_authed');
+        localStorage.removeItem('talkless_authed');
         authOverlay.style.display = 'grid';
         adminPass.value = '';
       });
@@ -572,11 +572,11 @@
       const modeBadge = document.querySelector('#licensing-mode-badge');
       const overviewBadge = document.querySelector('#overview-mode-badge');
 
-      let currentMode = localStorage.getItem('skylar_mode') || 'free';
+      let currentMode = localStorage.getItem('talkless_mode') || 'free';
 
       function setAdminMode(mode) {
         currentMode = mode;
-        localStorage.setItem('skylar_mode', mode);
+        localStorage.setItem('talkless_mode', mode);
         if (mode === 'premium') {
           modeBadge.textContent = 'PREMIUM MODE';
           modeBadge.style.color = '#ffcca7';
