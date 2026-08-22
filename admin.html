@@ -154,7 +154,7 @@
     <main class="main-content">
       <div id="loginCard" class="admin-card login-container">
         <h2>Admin Login</h2>
-        <p class="section-text">Enter passcode (talkless10) to access management console.</p>
+        <p class="section-text">Enter your private admin password to access the management console.</p>
         <form onsubmit="handleAdminLogin(event)">
           <div class="form-group">
             <label for="adminPass">Secure Passcode</label>
@@ -162,7 +162,7 @@
           </div>
           <button type="submit" class="submit-btn">Unlock Console</button>
         </form>
-        <div id="loginError" class="status-box error hidden" style="margin-top: 12px;">Incorrect passcode. Try talkless10.</div>
+        <div id="loginError" class="status-box error hidden" style="margin-top: 12px;">Incorrect admin password.</div>
       </div>
 
       <div id="dashboardContent" class="hidden">
@@ -316,17 +316,25 @@
   </div>
 
   <script>
-    function handleAdminLogin(event) {
+    async function handleAdminLogin(event) {
       event.preventDefault();
       const pass = document.getElementById('adminPass').value.trim();
       const errBox = document.getElementById('loginError');
       const loginCard = document.getElementById('loginCard');
       const dashboard = document.getElementById('dashboardContent');
-
-      if (pass === 'talkless10') {
+      errBox.classList.add('hidden');
+      try {
+        const response = await fetch('/api/connect', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({ action: 'login', password: pass }),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok || data.success !== true) throw new Error(data.error || 'Incorrect admin password.');
         loginCard.classList.add('hidden');
         dashboard.classList.remove('hidden');
-      } else {
+      } catch (error) {
+        errBox.textContent = error.message || 'Website admin authentication is unavailable.';
         errBox.classList.remove('hidden');
       }
     }
