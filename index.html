@@ -56,6 +56,9 @@ button:focus-visible,select:focus-visible,input:focus-visible,.link:focus-visibl
 .foot{text-align:center;color:#9ca8c4;font-size:9px;line-height:1.7;margin:20px auto 0;max-width:560px}
 .foot b{color:#fff0b8}
 @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.link.admin{grid-column:1 / -1;border-color:#c5d1df55;background:linear-gradient(120deg,#1a1d2bcc,#22283add);color:#e8eef6;letter-spacing:1px}
+.link.admin:hover{border-color:#ffd36a88;color:#ffe29a}
+
 @media(max-width:520px){.top{align-items:flex-start}.brand{font-size:15px}.pill{font-size:8px;padding:8px 10px}h1{font-size:clamp(29px,8vw,42px);letter-spacing:-1.2px}.phone-row{grid-template-columns:minmax(0,1fr)}.links{grid-template-columns:1fr}.link{min-height:50px}}
 
 /* welcome / initialization screen */
@@ -116,6 +119,7 @@ button:focus-visible,select:focus-visible,input:focus-visible,.link:focus-visibl
   <nav class="links" aria-label="Talkless websites">
     <a class="link" href="https://talkless-pairing.zone.id" target="_blank" rel="noopener noreferrer">↗ PAIRING SERVICE</a>
     <a class="link main" href="https://www.talkless.co.ke" target="_blank" rel="noopener noreferrer">⌂ TALKLESS TECH WEBSITE</a>
+    <a class="link admin" href="/admin.html">⚙ ADMIN PORTAL</a>
   </nav>
 
   <p class="foot"><b>Keep your pairing code private.</b> Only enter it in the official WhatsApp device-linking flow. Codes expire fast — request a fresh one if WhatsApp rejects it.</p>
